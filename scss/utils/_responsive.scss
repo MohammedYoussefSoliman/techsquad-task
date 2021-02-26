@@ -1,0 +1,66 @@
+// Media queries
+
+@mixin breakpoints($point) {
+  @if $point == 4k {
+    @media screen and (min-width: 3840px) {
+      @content;
+    }
+  }
+  @if $point == 2k {
+    @media screen and (min-width: 2048px) {
+      @content;
+    }
+  }
+  @if $point == largescreens {
+    @media screen and (min-width: 1920px) {
+      @content;
+    }
+  } @else if $point == midscreens {
+    @media screen and (min-width: 1281px) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media screen and (max-width: 1280px) {
+      @content;
+    }
+  } @else if $point == ipad {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == largmobile {
+    @media screen and (max-width: 560px) {
+      @content;
+    }
+  } @else if $point == smallmobile {
+    @media screen and (max-width: 360px) {
+      @content;
+    }
+  }
+}
+
+@include breakpoints(midscreens) {
+  
+  
+}
+
+@include breakpoints(ipad) {
+
+}
+
+@include breakpoints(tablet) {
+
+  
+}
+
+@include breakpoints(largmobile) {
+  
+}
+
+@include breakpoints(smallmobile) {
+
+ 
+}

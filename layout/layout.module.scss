@@ -1,0 +1,17 @@
+@import '../scss/utils/mixins';
+
+
+.layout {
+    padding-top: 80px;
+    background: $shade;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    &--grid {
+        flex: 1;
+    }
+
+}
+
+
+@import '../scss/utils/responsive';

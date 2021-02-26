@@ -1,0 +1,45 @@
+// fonts
+
+$inter: "Inter", sans-serif;
+
+// colors
+
+$primary-color: #00a47c;
+$main-typo: #010101;
+$shade:#ebebeb;
+$grey:#B9B9B9;
+$green: #18b45e;
+$red: #F91B34;
+$white: #ffffff;
+
+// font sizes
+
+$text-xs: 1em;
+$text-sm: 1.2em;
+$text-md: 1.4em;
+$text-lg: 2em;
+$text-xl: 2.4em;
+$text-xxl: 3.2em;
+
+// generics
+
+$generic-border: 1px solid #e5e5e5;
+$generic-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+
+@keyframes clockwise-rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anti-clockwise-rotating {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

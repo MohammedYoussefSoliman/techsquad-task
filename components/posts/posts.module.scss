@@ -1,0 +1,31 @@
+@import '../../scss/utils/mixins';
+
+
+.posts {
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .post {
+        width: 100%;
+        &--header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__icon {
+                font-size: 1.25rem;
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+        &--footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: $generic-border;
+        }
+    }
+}
+
+
+@import '../../scss/utils/responsive';

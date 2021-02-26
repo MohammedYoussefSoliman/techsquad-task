@@ -1,0 +1,37 @@
+@import '../../scss/utils/mixins';
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    box-shadow: $generic-box-shadow;
+    background: $primary-color;
+    &--bar {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $white;
+            text-transform: capitalize;
+        }
+        &__actions {
+            display: flex;
+            align-items: center;
+            .nav--btn {
+                @extend .btn__primary;
+                @include btn;
+                &:first-child {
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+@import '../../scss/utils/responsive';
