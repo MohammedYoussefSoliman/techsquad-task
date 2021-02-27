@@ -18,7 +18,8 @@ const Posts = () => {
     const {
         call,
         isLoading,
-        data
+        data,
+        error
     } = useHTTP(endpoint_news, 'GET', {skip, limit})
     
     useEffect(()=>call(), [skip, limit])
@@ -50,9 +51,13 @@ const Posts = () => {
             <div
             onScroll={handleScroll}
             className={scss['posts--container']}>
-                {allPosts.length ? (allPosts.map(post =>(
+                {(allPosts.length && !error) ? (allPosts.map(post =>(
                     <PostItem key={post.id} {...post} />
                 ))) : ""}
+                {error && <div className={scss['posts--error']}>
+                            <h3 className={scss['posts--error__title']}>Ooops! cant fetch posts</h3>
+                            <h3 className={scss['posts--error__desc']}>Something went wrong while fetching posts</h3>
+                    </div>}
             </div>
             {isLoading && <Spinner size="60" />}
         </main>

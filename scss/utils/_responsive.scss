@@ -101,6 +101,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
+        padding-top: 1rem;
         &__keyword {
           margin: 0;
         }
@@ -108,9 +109,4 @@
     }
   }
 
-}
-
-@include breakpoints(smallmobile) {
-
- 
 }
