@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export const handleStyles = (classes, scss, generalClass) => {
     let classesArr = []
     if(classes) {
@@ -8,4 +10,9 @@ export const handleStyles = (classes, scss, generalClass) => {
     }else{
         return [classesArr].join(" ")
     }
+}
+
+export const handleDate = (date) => {
+    return moment.utc(date)
+    .format('dddd, MMMM Do YYYY')+" AT "+moment.utc(date).format('h:mm a')
 }

@@ -3,7 +3,7 @@ const withImages = require('next-images')
 
 const nextConfig = {
   images: {
-    domains: ['placeholder.com']
+    domains: ['logo.clearbit.com']
   }
 }
 

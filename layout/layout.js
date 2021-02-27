@@ -15,7 +15,7 @@ const Layout = ({children}) => {
             <Grid item xs={3}>
                 <Aside />
             </Grid>
-            <Grid item xs={6} spacing={3}>
+            <Grid item xs={6}>
                 {children}
             </Grid>
             <Grid item xs={3}>

@@ -4,19 +4,22 @@ import Image from 'next/image';
 import {ImRss} from 'react-icons/im';
 
 
-const Post = () => {
+const Post = ({sourceLogo, sourceTitle, newsTitle, date, keywords}) => {
     return (
         <Paper className={[scss['paper'], scss['post']].join(' ')}>
             <div className={scss['post--header']}>
-                <Image src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png" alt="post logo" width={100} height={30} />
-                <h3>source title</h3>
+                <Image src={sourceLogo} alt="post logo" width={40} height={40} />
+                <h3>{sourceTitle}</h3>
                 <ImRss className={scss['post--header__icon']}/>
             </div>
             <div className={scss['post--body']}>
-                <h1>main Title</h1>
+                <h1 className={scss['h1__txt']}>{newsTitle}</h1>
+                <h4 className={scss['light__txt']}>{date}</h4>
             </div>
             <div className={scss['post--footer']}>
-                footer
+                {keywords.length ? keywords.map((word)=>(
+                    <span key={word._id} className={scss['post--footer__keyword']}>{word.name}</span>
+                )) : ""}
             </div>
         </Paper>
     )

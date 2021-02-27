@@ -2,14 +2,14 @@ import { useCallback, useState } from 'react';
 import {apiUrl, endpoint_news} from './base';
 
 
-const useHTTP = () => {
+const useHTTP = (endpoint, method, params, callData) => {
     
     const [data, setData] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
 
     
-    const call = useCallback(async (endpoint, method="GET", params, callData)=>{
+    const call = useCallback(async ()=>{
 
         const config = {
             headers: {
@@ -18,7 +18,7 @@ const useHTTP = () => {
             params,
             responseType: 'json',
         }
-
+        
         try {
             setIsLoading(true);
             let response;
@@ -37,7 +37,6 @@ const useHTTP = () => {
                     response = await apiUrl.get(endpoint, config);
                     break
             }
-            console.log(response.data)
             setData(response.data);
             setError(false);
             return response;
@@ -49,7 +48,7 @@ const useHTTP = () => {
         finally {
             setIsLoading(false);
         }
-    }, [endpoint, params])
+    }, [endpoint_news])
 
     return {
         call, data, isLoading, error

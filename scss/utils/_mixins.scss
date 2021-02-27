@@ -39,9 +39,12 @@
 
 .h1__txt {
   font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.5em;
+  font-weight: 500;
   color: $main-typo;
+  margin-bottom: 1.5rem;
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .h2__txt {
@@ -64,17 +67,9 @@
 }
 
 .light__txt {
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1.375em;
-  color: $white;
-}
-
-.small__light__txt {
-  font-size: 0.75em;
-  font-weight: 400;
-  line-height: 1em;
-  color: $white;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: $grey;
 }
 
 .btn__txt {
