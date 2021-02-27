@@ -48,11 +48,13 @@
 }
 
 .h2__txt {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.35em;
+  font-size: 1rem;
+  font-weight: 400;
   margin: 0;
   color: $main-typo;
+  &::first-letter {
+    text-transform: uppercase;
+  }
   span {
     font-weight: 500;
   }

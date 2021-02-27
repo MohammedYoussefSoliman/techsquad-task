@@ -9,7 +9,7 @@ const Post = ({sourceLogo, sourceTitle, newsTitle, date, keywords}) => {
         <Paper className={[scss['paper'], scss['post']].join(' ')}>
             <div className={scss['post--header']}>
                 <Image src={sourceLogo} alt="post logo" width={40} height={40} />
-                <h3>{sourceTitle}</h3>
+                <h3 className={[scss['h2__txt'], scss['post--header__title']].join(' ')}>{sourceTitle}</h3>
                 <ImRss className={scss['post--header__icon']}/>
             </div>
             <div className={scss['post--body']}>

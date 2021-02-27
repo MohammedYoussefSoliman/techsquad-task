@@ -48,16 +48,66 @@
 }
 
 @include breakpoints(ipad) {
-
+  .container {
+    max-width: 960px;
+  }
 }
 
 @include breakpoints(tablet) {
 
-  
+  .container {
+    max-width: 90%;
+  }
+
+  .layout {
+    &--grid {
+        &__aside {
+          display: none;
+        }
+    }
+
+}
+
+
 }
 
 @include breakpoints(largmobile) {
-  
+
+  .h1__txt {
+    font-size: 1.2rem;
+  }
+
+  .nav {
+    &--bar {
+        &__actions {
+            .nav--btn {
+              display: none;
+            }
+        }
+    }
+    .nav--menu {
+        display: block;
+    }
+  }
+  .posts {
+    .post {
+      &--header {
+        &__title {
+          font-size: 1rem;
+          margin-left: 0.5rem;
+        }
+      }
+      &--footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        &__keyword {
+          margin: 0;
+        }
+      }
+    }
+  }
+
 }
 
 @include breakpoints(smallmobile) {
